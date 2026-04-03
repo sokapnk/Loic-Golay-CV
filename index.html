@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loic Golay — Hospitality Specialist</title>
+  <title>Loic Steven Golay — Hospitality Specialist</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -35,7 +35,6 @@
       display: flex;
       justify-content: center;
       padding: 10px 16px;
-      gap: 0;
     }
     .lang-btn {
       display: flex;
@@ -56,14 +55,16 @@
     .lang-btn:first-of-type { border-radius: 6px 0 0 6px; border-right: none; }
     .lang-btn:last-of-type { border-radius: 0 6px 6px 0; }
     .lang-btn.active { background: var(--teal); border-color: var(--teal); color: #fff; }
-    /* ── Language toggling ── */
+
+    /* Language toggling */
     .fr { display: none; }
     body.show-fr .en { display: none; }
     body.show-fr .fr { display: block; }
     .fr-i { display: none !important; }
     body.show-fr .en-i { display: none !important; }
     body.show-fr .fr-i { display: inline !important; }
-    /* ── Hero ── */
+
+    /* Hero */
     .hero {
       background: var(--charcoal);
       color: #fff;
@@ -111,7 +112,8 @@
     .badge-teal { background: rgba(42,140,116,0.18); color: #68c9ae; border: 1px solid rgba(42,140,116,0.3); }
     .badge-white { background: rgba(255,255,255,0.09); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.18); }
     .badge-copper { background: rgba(184,115,58,0.18); color: #e09a61; border: 1px solid rgba(184,115,58,0.3); }
-    /* ── Contact Strip ── */
+
+    /* Contact Strip */
     .contact-strip {
       background: var(--cream);
       border-bottom: 1px solid var(--border);
@@ -133,9 +135,11 @@
     }
     .contact-item:hover { color: var(--teal); }
     .contact-item svg { width: 17px; height: 17px; flex-shrink: 0; color: var(--teal); }
-    /* ── Layout ── */
+
+    /* Layout */
     .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
-    /* ── Section Heading ── */
+
+    /* Section Heading */
     .section-head { padding: 48px 0 24px; }
     .section-head h2 {
       font-family: 'Cormorant Garamond', serif;
@@ -144,7 +148,8 @@
       margin-bottom: 8px;
     }
     .section-head .rule { width: 42px; height: 2.5px; background: var(--teal); border-radius: 2px; }
-    /* ── Period Banner ── */
+
+    /* Period Banner */
     .period-banner {
       margin: 8px 0 20px;
       padding: 11px 18px;
@@ -163,15 +168,14 @@
       font-size: 18px;
       font-style: italic;
       font-weight: 400;
-      text-transform: none;
-      letter-spacing: 0;
       opacity: 0.8;
       margin-left: auto;
     }
     .banner-fr { background: #edf4ff; color: #1a3a7a; }
     .banner-nz { background: #e8f5f1; color: #1a7a62; }
     .banner-tw { background: #fef0e6; color: #9a4b1a; }
-    /* ── Job Card ── */
+
+    /* Job Card */
     .job-card {
       background: #fff;
       border: 1px solid var(--border);
@@ -183,55 +187,27 @@
     }
     .job-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
     .job-card-header { padding: 20px 22px 18px; }
-    .job-top {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .job-logo {
-      width: 52px;
-      height: 52px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      object-fit: contain;
-      background: var(--cream);
-      flex-shrink: 0;
-      padding: 5px;
-    }
-    .job-title-block { flex: 1; min-width: 0; }
     .job-title {
       font-size: 16.5px;
       font-weight: 600;
-      color: var(--charcoal);
-      margin-bottom: 3px;
-      line-height: 1.3;
+      margin-bottom: 4px;
     }
     .job-meta {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 7px 14px;
-    }
-    .job-location {
       font-size: 12.5px;
       color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 4px;
     }
     .job-link {
-      font-size: 12px;
       color: var(--teal);
       text-decoration: none;
       font-weight: 500;
       display: flex;
       align-items: center;
       gap: 4px;
-      opacity: 0.9;
-      transition: opacity 0.2s;
     }
-    .job-link:hover { opacity: 1; }
-    .job-link svg { width: 12px; height: 12px; }
     .job-desc {
       font-size: 13.5px;
       color: #3a3a3a;
@@ -240,7 +216,8 @@
       border-top: 1px solid var(--border);
       padding-top: 16px;
     }
-    /* ── Photo Gallery ── */
+
+    /* Photo Gallery */
     .photo-gallery {
       display: grid;
       gap: 3px;
@@ -259,7 +236,8 @@
       transition: opacity 0.2s;
     }
     .photo-gallery img:hover { opacity: 0.9; }
-    /* ── Skills ── */
+
+    /* Skills */
     .skills-section {
       background: var(--cream);
       border-top: 1px solid var(--border);
@@ -304,7 +282,8 @@
     .pill-lang { background: var(--copper-light); color: var(--copper); }
     .pill-green { background: #f0f8e8; color: #3a7a1a; }
     .pill-purple { background: #f0e8f8; color: #6a1a9a; }
-    /* ── Footer ── */
+
+    /* Footer */
     footer {
       background: var(--charcoal);
       color: rgba(255,255,255,0.45);
@@ -314,7 +293,8 @@
       letter-spacing: 0.04em;
     }
     footer a { color: var(--teal); text-decoration: none; }
-    /* ── Lightbox ── */
+
+    /* Lightbox */
     #lightbox {
       display: none;
       position: fixed;
@@ -336,15 +316,13 @@
       border: none;
       cursor: pointer;
       opacity: 0.75;
-      line-height: 1;
     }
     #lb-close:hover { opacity: 1; }
+
     @media (max-width: 640px) {
       .skills-grid { grid-template-columns: 1fr; }
       .photo-gallery.cols-3 { grid-template-columns: repeat(2, 1fr); }
-      .photo-gallery.cols-4,
-      .photo-gallery.cols-5 { grid-template-columns: repeat(3, 1fr); }
-      .hero { padding: 48px 20px 40px; }
+      .photo-gallery.cols-4, .photo-gallery.cols-5 { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </head>
@@ -361,31 +339,15 @@
     <span class="en-i">Hospitality Specialist · CV</span>
     <span class="fr-i">Professionnel de l'Hôtellerie · CV</span>
   </p>
-  <h1>Steven <span>Loic</span> Golay</h1>
+  <h1>Loic <span>Steven</span> Golay</h1>
   <p class="hero-subtitle">
     <span class="en-i">Housekeeping &amp; Hospitality Specialist</span>
     <span class="fr-i">Employé polyvalent — Hôtellerie &amp; Restauration</span>
   </p>
   <div class="badges">
-    <span class="badge badge-teal">
-      🇨🇭 🇫🇷
-      <span class="en-i">French-Swiss</span>
-      <span class="fr-i">Franco-Suisse</span>
-    </span>
-    <span class="badge badge-white">
-      <span class="en-i">34 years old</span>
-      <span class="fr-i">34 ans</span>
-    </span>
-    <span class="badge badge-copper">
-      🇳🇿 🇹🇼 🇫🇷
-      <span class="en-i">3 Countries</span>
-      <span class="fr-i">3 Pays</span>
-    </span>
-    <span class="badge badge-white">
-      🚗
-      <span class="en-i">Category B Licence</span>
-      <span class="fr-i">Permis B</span>
-    </span>
+    <span class="badge badge-teal">🇨🇭 🇫🇷 <span class="en-i">French-Swiss</span><span class="fr-i">Franco-Suisse</span></span>
+    <span class="badge badge-white"><span class="en-i">34 years old</span><span class="fr-i">34 ans</span></span>
+    <span class="badge badge-copper">🇳🇿 🇹🇼 🇫🇷 <span class="en-i">3 Countries</span><span class="fr-i">3 Pays</span></span>
   </div>
 </header>
 
@@ -396,6 +358,13 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
     </svg>
     07 62 71 37 55
+  </a>
+  <a class="contact-item" href="https://api.whatsapp.com/send/?phone=642108841490&text&type=phone_number&app_absent=0">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.5 8.5 0 01-8.5 8.5H4.5L2 21l2.5-2.5H5a8.5 8.5 0 018.5-8.5z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4M12 16h.01"/>
+    </svg>
+    WhatsApp
   </a>
   <a class="contact-item" href="mailto:steveng34@gmail.com">
     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
@@ -419,7 +388,7 @@
   </a>
 </div>
 
-<!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+<!-- Experience -->
 <div class="container">
   <div class="section-head">
     <h2 class="en">Professional Experience</h2>
@@ -427,7 +396,7 @@
     <div class="rule"></div>
   </div>
 
-  <!-- ─── 2026 · France ─── -->
+  <!-- 2026 France -->
   <div class="period-banner banner-fr">
     <span class="flag">🇫🇷</span>
     <span class="en-i">France</span>
@@ -435,22 +404,14 @@
     <span class="period-year">2026</span>
   </div>
 
-  <!-- Terra-Beka Lodge ★★★★ -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/terrabeka-logo.jpg" alt="Terra Beka Lodge logo">
-        <div class="job-title-block">
-          <div class="job-title">Terra-Beka Lodge ★★★★</div>
-          <div class="job-meta">
-            <span class="job-location">📍 La Chapelle d'Abondance</span>
-            <a class="job-link" href="https://www.terra-beka.fr/en/" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">Terra-Beka Lodge ★★★★</div>
+      <div class="job-meta">
+        <span>📍 La Chapelle d'Abondance</span>
+        <a class="job-link" href="https://www.terra-beka.fr/en/" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Versatile room attendant at a 4-star alpine hotel — thorough full-turnover cleaning and daily servicing, common area upkeep, linen room management, and rigorous room inspections with close attention to detail for guest arrivals.</span>
@@ -458,6 +419,7 @@
       </div>
     </div>
     <div class="photo-gallery cols-5">
+      <img src="Img/terrabeka-logo.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
       <img src="Img/terrabeka1.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
       <img src="Img/terrabeka2.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
       <img src="Img/terrabeka3.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
@@ -466,7 +428,7 @@
     </div>
   </div>
 
-  <!-- ─── 2025 · Taiwan & France ─── -->
+  <!-- 2025 Taiwan & France -->
   <div class="period-banner banner-tw">
     <span class="flag">🇹🇼 🇫🇷</span>
     <span class="en-i">Taiwan &amp; France</span>
@@ -474,22 +436,14 @@
     <span class="period-year">2025</span>
   </div>
 
-  <!-- Coral B&B -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/coral-logo.jpg" alt="Coral B&amp;B logo">
-        <div class="job-title-block">
-          <div class="job-title">Coral B&amp;B</div>
-          <div class="job-meta">
-            <span class="job-location">📍 Liuqiu Island</span>
-            <a class="job-link" href="https://www.agoda.com/coral-b-b/hotel/liuqiu-tw.html?cid=1720055&amp;ds=lzxs%2FgBOR6M35B4G" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">Coral B&amp;B</div>
+      <div class="job-meta">
+        <span>📍 Liuqiu Island</span>
+        <a class="job-link" href="https://www.agoda.com/coral-b-b/hotel/liuqiu-tw.html?cid=1720055&amp;ds=lzxs%2FgBOR6M35B4G" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Housekeeping of guest rooms and communal areas — bathrooms, beds, floors, and finishing details, with a warm approach to guest interaction on a small island property.</span>
@@ -497,6 +451,7 @@
       </div>
     </div>
     <div class="photo-gallery cols-2">
+      <img src="Img/coral-logo.jpg" alt="Coral B&amp;B" loading="lazy" onclick="openLb(this)">
       <img src="Img/coral1.jpg" alt="Coral B&amp;B" loading="lazy" onclick="openLb(this)">
       <img src="Img/coral2.jpg" alt="Coral B&amp;B" loading="lazy" onclick="openLb(this)">
     </div>
@@ -505,19 +460,12 @@
   <!-- The Meeting Mate Hostel -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/meetingmate-logo.jpg" alt="Meeting Mate Hostel logo">
-        <div class="job-title-block">
-          <div class="job-title">The Meeting Mate Hostel</div>
-          <div class="job-meta">
-            <span class="job-location">📍 Taipei</span>
-            <a class="job-link" href="https://www.agoda.com/h32608691/hotel/taipei-tw.html?cid=1720055&amp;ds=MwfLMiBgSk8hnM1C" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">The Meeting Mate Hostel</div>
+      <div class="job-meta">
+        <span>📍 Taipei</span>
+        <a class="job-link" href="https://www.agoda.com/h32608691/hotel/taipei-tw.html?cid=1720055&amp;ds=MwfLMiBgSk8hnM1C" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Versatile housekeeping attendant — standard room and dormitory cleaning alongside minor renovation and repair work including painting and furniture installation.</span>
@@ -525,6 +473,7 @@
       </div>
     </div>
     <div class="photo-gallery cols-2">
+      <img src="Img/meetingmate-logo.jpg" alt="Meeting Mate Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/meetingmate1.jpg" alt="Meeting Mate Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/meetingmate2.jpg" alt="Meeting Mate Hostel" loading="lazy" onclick="openLb(this)">
     </div>
@@ -533,19 +482,12 @@
   <!-- Résidence Côté Mer -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/cotemer-logo.jpg" alt="Résidence Côté Mer logo">
-        <div class="job-title-block">
-          <div class="job-title">Résidence Côté Mer</div>
-          <div class="job-meta">
-            <span class="job-location">📍 La Grande Motte</span>
-            <a class="job-link" href="https://www.agoda.com/residence-cote-mer/hotel/la-grande-motte-fr.html?cid=1720055&amp;ds=ou0yLnuHbVqoUxm6" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">Résidence Côté Mer</div>
+      <div class="job-meta">
+        <span>📍 La Grande Motte</span>
+        <a class="job-link" href="https://www.agoda.com/residence-cote-mer/hotel/la-grande-motte-fr.html?cid=1720055&amp;ds=ou0yLnuHbVqoUxm6" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Part-time receptionist with housekeeping duties covering pool maintenance and guest room cleaning.</span>
@@ -553,6 +495,7 @@
       </div>
     </div>
     <div class="photo-gallery cols-2">
+      <img src="Img/cotemer-logo.jpg" alt="Résidence Côté Mer" loading="lazy" onclick="openLb(this)">
       <img src="Img/cotemer1.jpg" alt="Résidence Côté Mer" loading="lazy" onclick="openLb(this)">
       <img src="Img/cotemer2.jpg" alt="Résidence Côté Mer" loading="lazy" onclick="openLb(this)">
     </div>
@@ -561,19 +504,12 @@
   <!-- On My Way Hostel -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/myway-logo.png" alt="On My Way Hostel logo">
-        <div class="job-title-block">
-          <div class="job-title">On My Way Hostel</div>
-          <div class="job-meta">
-            <span class="job-location">📍 Taipei</span>
-            <a class="job-link" href="https://www.agoda.com/on-my-way-taipei-hostel/hotel/taipei-tw.html?cid=1720055" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">On My Way Hostel</div>
+      <div class="job-meta">
+        <span>📍 Taipei</span>
+        <a class="job-link" href="https://www.agoda.com/on-my-way-taipei-hostel/hotel/taipei-tw.html?cid=1720055" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Full room service cleaning in a small Taipei hostel, operating as one of two staff per shift — dormitories, private rooms, and all communal areas.</span>
@@ -581,13 +517,14 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
+      <img src="Img/myway-logo.png" alt="On My Way Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/myway1.png" alt="On My Way Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/myway2.png" alt="On My Way Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/myway3.png" alt="On My Way Hostel" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
-  <!-- ─── 2022–2024 · New Zealand ─── -->
+  <!-- 2022–2024 New Zealand -->
   <div class="period-banner banner-nz">
     <span class="flag">🇳🇿</span>
     <span class="en-i">New Zealand · Working Holiday Visa</span>
@@ -595,22 +532,14 @@
     <span class="period-year">2022 – 2024</span>
   </div>
 
-  <!-- Ramada & Wyndham Gardens -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/ramada-logo.png" alt="Ramada logo">
-        <div class="job-title-block">
-          <div class="job-title">Ramada &amp; Wyndham Garden Hotels</div>
-          <div class="job-meta">
-            <span class="job-location">📍 Frankton, Queenstown</span>
-            <a class="job-link" href="https://www.wyndhamhotels.com/wyndham-garden/queenstown-new-zealand/wyndham-garden-remarkables-park-queenstown/overview" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">Ramada &amp; Wyndham Garden Hotels</div>
+      <div class="job-meta">
+        <span>📍 Frankton, Queenstown</span>
+        <a class="job-link" href="https://www.wyndhamhotels.com/wyndham-garden/queenstown-new-zealand/wyndham-garden-remarkables-park-queenstown/overview" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Housekeeping team member responsible for complete room preparation — floors, beds, bathrooms, and finishing details — alongside close coordination with the front desk for guest arrivals and departures.</span>
@@ -618,6 +547,7 @@
       </div>
     </div>
     <div class="photo-gallery cols-4">
+      <img src="Img/ramada-logo.png" alt="Ramada &amp; Wyndham Garden" loading="lazy" onclick="openLb(this)">
       <img src="Img/ramada1.png" alt="Ramada Queenstown" loading="lazy" onclick="openLb(this)">
       <img src="Img/ramada2.png" alt="Ramada Queenstown" loading="lazy" onclick="openLb(this)">
       <img src="Img/wyndham1.png" alt="Wyndham Garden" loading="lazy" onclick="openLb(this)">
@@ -628,19 +558,12 @@
   <!-- Kingsgate Hotel -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/kingsgate-logo.png" alt="Kingsgate Hotel logo">
-        <div class="job-title-block">
-          <div class="job-title">Kingsgate Hotel</div>
-          <div class="job-meta">
-            <span class="job-location">📍 Paihia, Bay of Islands</span>
-            <a class="job-link" href="https://www.millenniumhotels.com/en/bay-of-islands/kingsgate-hotel-autolodge-paihia/" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">Kingsgate Hotel</div>
+      <div class="job-meta">
+        <span>📍 Paihia, Bay of Islands</span>
+        <a class="job-link" href="https://www.millenniumhotels.com/en/bay-of-islands/kingsgate-hotel-autolodge-paihia/" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Room attendant delivering thorough full-turnover cleans (à blanc) and mid-stay housekeeping services, maintaining high cleanliness standards throughout the property.</span>
@@ -648,6 +571,7 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
+      <img src="Img/kingsgate-logo.png" alt="Kingsgate Hotel" loading="lazy" onclick="openLb(this)">
       <img src="Img/kingsgate1.png" alt="Kingsgate Hotel" loading="lazy" onclick="openLb(this)">
       <img src="Img/kingsgate2.png" alt="Kingsgate Hotel" loading="lazy" onclick="openLb(this)">
       <img src="Img/kingsgate3.png" alt="Kingsgate Hotel" loading="lazy" onclick="openLb(this)">
@@ -657,19 +581,12 @@
   <!-- Lylo -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/lylo-logo.png" alt="Lylo logo">
-        <div class="job-title-block">
-          <div class="job-title">Lylo Capsule Hostel</div>
-          <div class="job-meta">
-            <span class="job-location">📍 Queenstown</span>
-            <a class="job-link" href="https://www.lylo.com/queenstown/" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">Lylo Capsule Hostel</div>
+      <div class="job-meta">
+        <span>📍 Queenstown</span>
+        <a class="job-link" href="https://www.lylo.com/queenstown/" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Daily team-based reset of private pods, guest rooms, and shared hostel spaces in one of Queenstown's modern capsule properties.</span>
@@ -677,6 +594,7 @@
       </div>
     </div>
     <div class="photo-gallery cols-2">
+      <img src="Img/lylo-logo.png" alt="Lylo Capsule Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/lylo1.png" alt="Lylo Capsule Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/lylo2.png" alt="Lylo Capsule Hostel" loading="lazy" onclick="openLb(this)">
     </div>
@@ -685,19 +603,12 @@
   <!-- Tasman Holiday Park -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/tasman-logo.png" alt="Tasman Holiday Park logo">
-        <div class="job-title-block">
-          <div class="job-title">Tasman Holiday Park</div>
-          <div class="job-meta">
-            <span class="job-location">📍 Waihi Beach</span>
-            <a class="job-link" href="https://tasmanholidayparks.com/nz/waihi-beach/" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">Tasman Holiday Park</div>
+      <div class="job-meta">
+        <span>📍 Waihi Beach</span>
+        <a class="job-link" href="https://tasmanholidayparks.com/nz/waihi-beach/" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Cleaning of mobile homes, sanitary blocks, sauna, and kitchen facilities across the park — typically paired with a colleague and navigating between sites by golf cart.</span>
@@ -705,6 +616,7 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
+      <img src="Img/tasman-logo.png" alt="Tasman Holiday Park" loading="lazy" onclick="openLb(this)">
       <img src="Img/tasman1.png" alt="Tasman Holiday Park" loading="lazy" onclick="openLb(this)">
       <img src="Img/tasman2.png" alt="Tasman Holiday Park" loading="lazy" onclick="openLb(this)">
       <img src="Img/tasman3.png" alt="Tasman Holiday Park" loading="lazy" onclick="openLb(this)">
@@ -714,19 +626,12 @@
   <!-- Creeksyde Holiday Park -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/creeksyde-logo.png" alt="Creeksyde Holiday Park logo">
-        <div class="job-title-block">
-          <div class="job-title">Creeksyde Holiday Park</div>
-          <div class="job-meta">
-            <span class="job-location">📍 Queenstown</span>
-            <a class="job-link" href="https://www.camp.co.nz/" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">Creeksyde Holiday Park</div>
+      <div class="job-meta">
+        <span>📍 Queenstown</span>
+        <a class="job-link" href="https://www.camp.co.nz/" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Grounds and outdoor maintenance — hedge trimming, lawn mowing, leaf collection, irrigation management, and cleaning of communal areas and BBQ facilities. Primarily independent work with occasional team support.</span>
@@ -734,13 +639,14 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
+      <img src="Img/creeksyde-logo.png" alt="Creeksyde Holiday Park" loading="lazy" onclick="openLb(this)">
       <img src="Img/creeksyde1.png" alt="Creeksyde Holiday Park" loading="lazy" onclick="openLb(this)">
       <img src="Img/creeksyde2.png" alt="Creeksyde Holiday Park" loading="lazy" onclick="openLb(this)">
       <img src="Img/creeksyde3.png" alt="Creeksyde Holiday Park" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
-  <!-- ─── 2020–2021 · France ─── -->
+  <!-- 2020–2021 France -->
   <div class="period-banner banner-fr">
     <span class="flag">🇫🇷</span>
     <span class="en-i">France</span>
@@ -748,22 +654,14 @@
     <span class="period-year">2020 – 2021</span>
   </div>
 
-  <!-- Hôtel Les Rives Bleues -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/rivesbleues-logo.png" alt="Les Rives Bleues logo">
-        <div class="job-title-block">
-          <div class="job-title">Hôtel Les Rives Bleues</div>
-          <div class="job-meta">
-            <span class="job-location">📍 La Grande Motte</span>
-            <a class="job-link" href="https://hotel-lesrivesbleues.com/" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">Hôtel Les Rives Bleues</div>
+      <div class="job-meta">
+        <span>📍 La Grande Motte</span>
+        <a class="job-link" href="https://hotel-lesrivesbleues.com/" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Night receptionist handling incoming calls, reservations, check-in and check-out procedures, and breakfast service — combined with pool and parking area maintenance and overnight security responsibilities.</span>
@@ -771,12 +669,13 @@
       </div>
     </div>
     <div class="photo-gallery cols-2">
+      <img src="Img/rivesbleues-logo.png" alt="Les Rives Bleues" loading="lazy" onclick="openLb(this)">
       <img src="Img/rivesbleues1.png" alt="Les Rives Bleues" loading="lazy" onclick="openLb(this)">
       <img src="Img/rivesbleues2.png" alt="Les Rives Bleues" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
-  <!-- ─── 2019–2020 · Taiwan ─── -->
+  <!-- 2019–2020 Taiwan -->
   <div class="period-banner banner-tw">
     <span class="flag">🇹🇼</span>
     <span class="en-i">Taiwan</span>
@@ -784,22 +683,14 @@
     <span class="period-year">2019 – 2020</span>
   </div>
 
-  <!-- Wagaligong Surf Hostel -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/waga-logo.png" alt="Wagaligong Surf Hostel logo">
-        <div class="job-title-block">
-          <div class="job-title">Wagaligong Surf Hostel</div>
-          <div class="job-meta">
-            <span class="job-location">📍 Dulan, Taitung</span>
-            <a class="job-link" href="https://www.wagaligongtaiwan.com/" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">Wagaligong Surf Hostel</div>
+      <div class="job-meta">
+        <span>📍 Dulan, Taitung</span>
+        <a class="job-link" href="https://www.wagaligongtaiwan.com/" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Surf instructor assistant — guest initiation and group sessions, beach transfers by shuttle, and full management of rental equipment inventory.</span>
@@ -807,28 +698,21 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
+      <img src="Img/waga-logo.png" alt="Wagaligong Surf Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/waga1.png" alt="Wagaligong Surf Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/waga2.png" alt="Wagaligong Surf Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/waga3.png" alt="Wagaligong Surf Hostel" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
-  <!-- Rainbow Wave Surf Hostel -->
   <div class="job-card">
     <div class="job-card-header">
-      <div class="job-top">
-        <img class="job-logo" src="Img/rainbow-logo.png" alt="Rainbow Wave Surf Hostel logo">
-        <div class="job-title-block">
-          <div class="job-title">Rainbow Wave Surf Hostel</div>
-          <div class="job-meta">
-            <span class="job-location">📍 Hengchun, Kenting</span>
-            <a class="job-link" href="https://www.agoda.com/rainbow-wave-surfing-hostel/hotel/kenting-tw.html?cid=1720055&amp;ds=v%2F%2FNco6DVQ4%2BbwRn" target="_blank" rel="noopener">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-              <span class="en-i">Visit website</span>
-              <span class="fr-i">Site web</span>
-            </a>
-          </div>
-        </div>
+      <div class="job-title">Rainbow Wave Surf Hostel</div>
+      <div class="job-meta">
+        <span>📍 Hengchun, Kenting</span>
+        <a class="job-link" href="https://www.agoda.com/rainbow-wave-surfing-hostel/hotel/kenting-tw.html?cid=1720055&amp;ds=v%2F%2FNco6DVQ4%2BbwRn" target="_blank" rel="noopener">
+          <span class="en-i">Visit website</span><span class="fr-i">Site web</span>
+        </a>
       </div>
       <div class="job-desc">
         <span class="en">Hostel staff and surf instructor assistant — guest welcome and onboarding, surf instruction support, housekeeping of rooms and common areas, and morning breakfast preparation.</span>
@@ -836,6 +720,7 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
+      <img src="Img/rainbow-logo.png" alt="Rainbow Wave Surf Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/rainbow1.png" alt="Rainbow Wave Surf Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/rainbow2.png" alt="Rainbow Wave Surf Hostel" loading="lazy" onclick="openLb(this)">
       <img src="Img/rainbow3.png" alt="Rainbow Wave Surf Hostel" loading="lazy" onclick="openLb(this)">
@@ -843,14 +728,13 @@
   </div>
 </div>
 
-<!-- ── Skills & Profile ── -->
+<!-- Skills & Profile -->
 <div class="skills-section">
   <div class="container">
     <h2 class="skills-head en">Skills &amp; Profile</h2>
     <h2 class="skills-head fr">Compétences &amp; Profil</h2>
     <div class="skills-rule"></div>
     <div class="skills-grid">
-      <!-- Housekeeping block – simplified & accurate terms -->
       <div class="skill-block">
         <h4 class="en">Housekeeping</h4>
         <h4 class="fr">Ménage hôtelier</h4>
@@ -863,8 +747,6 @@
         <span class="pill pill-teal en">Linen &amp; laundry</span>
         <span class="pill pill-teal fr">Lingerie</span>
       </div>
-
-      <!-- Languages -->
       <div class="skill-block">
         <h4 class="en">Languages</h4>
         <h4 class="fr">Langues</h4>
@@ -873,8 +755,6 @@
         <span class="pill pill-lang en">🇬🇧 English — Fluent</span>
         <span class="pill pill-lang fr">🇬🇧 Anglais — Courant</span>
       </div>
-
-      <!-- Hospitality & Reception – simplified -->
       <div class="skill-block">
         <h4 class="en">Hospitality &amp; Reception</h4>
         <h4 class="fr">Accueil &amp; Réception</h4>
@@ -887,8 +767,6 @@
         <span class="pill pill-purple en">Pool &amp; facility maintenance</span>
         <span class="pill pill-purple fr">Entretien piscine &amp; installations</span>
       </div>
-
-      <!-- Outdoor & Sports – simplified -->
       <div class="skill-block">
         <h4 class="en">Outdoor &amp; Sports</h4>
         <h4 class="fr">Activités outdoor &amp; sport</h4>
@@ -897,8 +775,6 @@
         <span class="pill pill-green fr">Gestion matériel location</span>
         <span class="pill pill-green en">Groundskeeping</span>
         <span class="pill pill-green fr">Entretien espaces verts</span>
-        <span class="pill pill-green en">Category B Licence</span>
-        <span class="pill pill-green fr">Permis B</span>
       </div>
     </div>
   </div>
