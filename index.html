@@ -7,28 +7,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --charcoal:     #1c1c1e;
-      --cream:        #f7f2ea;
-      --warm-white:   #fdfaf5;
-      --teal:         #2a8c74;
-      --teal-light:   #e8f5f1;
-      --copper:       #b8733a;
+      --charcoal: #1c1c1e;
+      --cream: #f7f2ea;
+      --warm-white: #fdfaf5;
+      --teal: #2a8c74;
+      --teal-light: #e8f5f1;
+      --copper: #b8733a;
       --copper-light: #fdf4ec;
-      --muted:        #6b6b6b;
-      --border:       #e2ddd5;
-      --shadow:       0 2px 20px rgba(0,0,0,0.07);
+      --muted: #6b6b6b;
+      --border: #e2ddd5;
+      --shadow: 0 4px 24px rgba(0,0,0,0.06);
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: 'Jost', sans-serif;
       background: var(--warm-white);
       color: var(--charcoal);
       font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.65;
     }
-
     /* ── Language Bar ── */
     #lang-bar {
       position: sticky;
@@ -40,63 +37,60 @@
       padding: 10px 16px;
       gap: 0;
     }
-
     .lang-btn {
       display: flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 20px;
+      padding: 7px 22px;
       border: 1.5px solid rgba(255,255,255,0.2);
       background: transparent;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255,255,255,0.65);
       font-family: 'Jost', sans-serif;
       font-size: 11.5px;
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .lang-btn:first-of-type { border-radius: 4px 0 0 4px; border-right: none; }
-    .lang-btn:last-of-type  { border-radius: 0 4px 4px 0; }
-    .lang-btn.active        { background: var(--teal); border-color: var(--teal); color: #fff; }
-
+    .lang-btn:first-of-type { border-radius: 6px 0 0 6px; border-right: none; }
+    .lang-btn:last-of-type { border-radius: 0 6px 6px 0; }
+    .lang-btn.active { background: var(--teal); border-color: var(--teal); color: #fff; }
     /* ── Language toggling ── */
-    .fr                     { display: none; }
-    body.show-fr .en        { display: none; }
-    body.show-fr .fr        { display: block; }
-    .fr-i                   { display: none !important; }
-    body.show-fr .en-i      { display: none !important; }
-    body.show-fr .fr-i      { display: inline !important; }
-
+    .fr { display: none; }
+    body.show-fr .en { display: none; }
+    body.show-fr .fr { display: block; }
+    .fr-i { display: none !important; }
+    body.show-fr .en-i { display: none !important; }
+    body.show-fr .fr-i { display: inline !important; }
     /* ── Hero ── */
     .hero {
       background: var(--charcoal);
       color: #fff;
-      padding: 52px 24px 44px;
+      padding: 56px 24px 48px;
       text-align: center;
     }
     .hero-eyebrow {
       font-size: 11px;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--teal);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       font-weight: 500;
     }
     .hero h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(38px, 9vw, 62px);
+      font-size: clamp(38px, 8.5vw, 62px);
       font-weight: 300;
-      line-height: 1.1;
-      margin-bottom: 10px;
+      line-height: 1.05;
+      margin-bottom: 12px;
     }
     .hero h1 span { font-style: italic; color: var(--copper); }
     .hero-subtitle {
-      font-size: 13px;
-      color: rgba(255,255,255,0.55);
-      letter-spacing: 0.05em;
-      margin-bottom: 28px;
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.04em;
+      margin-bottom: 32px;
     }
     .badges {
       display: flex;
@@ -108,156 +102,144 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      padding: 5px 14px;
+      padding: 6px 16px;
       border-radius: 100px;
       font-size: 11.5px;
       font-weight: 500;
       letter-spacing: 0.03em;
     }
-    .badge-teal   { background: rgba(42,140,116,0.2);  color: #68c9ae; border: 1px solid rgba(42,140,116,0.35); }
-    .badge-white  { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.15); }
-    .badge-copper { background: rgba(184,115,58,0.2);  color: #e09a61; border: 1px solid rgba(184,115,58,0.35); }
-
+    .badge-teal { background: rgba(42,140,116,0.18); color: #68c9ae; border: 1px solid rgba(42,140,116,0.3); }
+    .badge-white { background: rgba(255,255,255,0.09); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.18); }
+    .badge-copper { background: rgba(184,115,58,0.18); color: #e09a61; border: 1px solid rgba(184,115,58,0.3); }
     /* ── Contact Strip ── */
     .contact-strip {
       background: var(--cream);
       border-bottom: 1px solid var(--border);
-      padding: 14px 20px;
+      padding: 16px 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px 22px;
+      gap: 14px 28px;
     }
     .contact-item {
       display: flex;
       align-items: center;
       gap: 7px;
-      font-size: 13px;
+      font-size: 13.5px;
       color: var(--charcoal);
       text-decoration: none;
       font-weight: 400;
       transition: color 0.2s;
     }
     .contact-item:hover { color: var(--teal); }
-    .contact-item svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--teal); }
-
+    .contact-item svg { width: 17px; height: 17px; flex-shrink: 0; color: var(--teal); }
     /* ── Layout ── */
-    .container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
-
+    .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
     /* ── Section Heading ── */
-    .section-head { padding: 40px 0 20px; }
+    .section-head { padding: 48px 0 24px; }
     .section-head h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 30px;
+      font-size: 32px;
       font-weight: 400;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
-    .section-head .rule { width: 36px; height: 2px; background: var(--teal); border-radius: 2px; }
-
+    .section-head .rule { width: 42px; height: 2.5px; background: var(--teal); border-radius: 2px; }
     /* ── Period Banner ── */
     .period-banner {
-      margin: 8px 0 16px;
-      padding: 10px 16px;
-      border-radius: 8px;
+      margin: 8px 0 20px;
+      padding: 11px 18px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       gap: 10px;
       font-size: 12.5px;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
-    .period-banner .flag { font-size: 18px; font-weight: 400; letter-spacing: 0; }
+    .period-banner .flag { font-size: 19px; }
     .period-banner .period-year {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 17px;
+      font-size: 18px;
       font-style: italic;
       font-weight: 400;
       text-transform: none;
       letter-spacing: 0;
-      opacity: 0.75;
+      opacity: 0.8;
       margin-left: auto;
     }
     .banner-fr { background: #edf4ff; color: #1a3a7a; }
     .banner-nz { background: #e8f5f1; color: #1a7a62; }
     .banner-tw { background: #fef0e6; color: #9a4b1a; }
-
     /* ── Job Card ── */
     .job-card {
       background: #fff;
       border: 1px solid var(--border);
-      border-radius: 12px;
-      margin-bottom: 20px;
+      border-radius: 16px;
+      margin-bottom: 24px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .job-card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-
-    .job-card-header { padding: 18px 20px 16px; }
-
+    .job-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+    .job-card-header { padding: 20px 22px 18px; }
     .job-top {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
     }
-
-    /* Logo thumbnail */
     .job-logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 10px;
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
       border: 1px solid var(--border);
       object-fit: contain;
       background: var(--cream);
       flex-shrink: 0;
-      padding: 4px;
+      padding: 5px;
     }
-
     .job-title-block { flex: 1; min-width: 0; }
     .job-title {
-      font-size: 15.5px;
+      font-size: 16.5px;
       font-weight: 600;
       color: var(--charcoal);
-      margin-bottom: 2px;
+      margin-bottom: 3px;
       line-height: 1.3;
     }
     .job-meta {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 6px 12px;
+      gap: 7px 14px;
     }
     .job-location {
-      font-size: 12px;
+      font-size: 12.5px;
       color: var(--muted);
       display: flex;
       align-items: center;
       gap: 4px;
     }
     .job-link {
-      font-size: 11.5px;
+      font-size: 12px;
       color: var(--teal);
       text-decoration: none;
       font-weight: 500;
       display: flex;
       align-items: center;
-      gap: 3px;
-      opacity: 0.85;
-      transition: opacity 0.15s;
+      gap: 4px;
+      opacity: 0.9;
+      transition: opacity 0.2s;
     }
     .job-link:hover { opacity: 1; }
-    .job-link svg { width: 11px; height: 11px; }
-
+    .job-link svg { width: 12px; height: 12px; }
     .job-desc {
       font-size: 13.5px;
       color: #3a3a3a;
-      line-height: 1.65;
-      margin-top: 12px;
+      line-height: 1.7;
+      margin-top: 16px;
       border-top: 1px solid var(--border);
-      padding-top: 12px;
+      padding-top: 16px;
     }
-
     /* ── Photo Gallery ── */
     .photo-gallery {
       display: grid;
@@ -268,115 +250,109 @@
     .photo-gallery.cols-2 { grid-template-columns: repeat(2, 1fr); }
     .photo-gallery.cols-4 { grid-template-columns: repeat(4, 1fr); }
     .photo-gallery.cols-5 { grid-template-columns: repeat(5, 1fr); }
-
     .photo-gallery img {
       width: 100%;
       aspect-ratio: 4/3;
       object-fit: cover;
       display: block;
       cursor: zoom-in;
-      transition: opacity 0.15s;
+      transition: opacity 0.2s;
     }
-    .photo-gallery img:hover { opacity: 0.88; }
-
+    .photo-gallery img:hover { opacity: 0.9; }
     /* ── Skills ── */
     .skills-section {
       background: var(--cream);
       border-top: 1px solid var(--border);
-      padding: 36px 20px 40px;
+      padding: 48px 20px 52px;
       margin-top: 32px;
     }
     .skills-head {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
+      font-size: 29px;
       font-weight: 400;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
-    .skills-rule { width: 36px; height: 2px; background: var(--teal); border-radius: 2px; margin-bottom: 20px; }
-
+    .skills-rule { width: 42px; height: 2.5px; background: var(--teal); border-radius: 2px; margin-bottom: 24px; }
     .skills-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: 18px;
     }
     .skill-block {
       background: #fff;
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px;
+      border-radius: 14px;
+      padding: 20px;
     }
     .skill-block h4 {
-      font-size: 10.5px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       color: var(--teal);
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
     .pill {
       display: inline-block;
       border-radius: 100px;
-      padding: 3px 10px;
-      font-size: 12px;
+      padding: 4px 12px;
+      font-size: 12.5px;
       font-weight: 500;
-      margin: 3px 3px 0 0;
+      margin: 3px 4px 4px 0;
     }
-    .pill-teal   { background: var(--teal-light);   color: var(--teal); }
-    .pill-lang   { background: var(--copper-light); color: var(--copper); }
-    .pill-green  { background: #f0f8e8; color: #3a7a1a; }
+    .pill-teal { background: var(--teal-light); color: var(--teal); }
+    .pill-lang { background: var(--copper-light); color: var(--copper); }
+    .pill-green { background: #f0f8e8; color: #3a7a1a; }
     .pill-purple { background: #f0e8f8; color: #6a1a9a; }
-
     /* ── Footer ── */
     footer {
       background: var(--charcoal);
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.45);
       text-align: center;
-      padding: 24px;
-      font-size: 12px;
+      padding: 32px 20px;
+      font-size: 12.5px;
       letter-spacing: 0.04em;
     }
     footer a { color: var(--teal); text-decoration: none; }
-
     /* ── Lightbox ── */
     #lightbox {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.92);
+      background: rgba(0,0,0,0.93);
       z-index: 999;
       align-items: center;
       justify-content: center;
       padding: 20px;
     }
     #lightbox.open { display: flex; }
-    #lightbox img { max-width: 100%; max-height: 90vh; border-radius: 4px; object-fit: contain; }
+    #lightbox img { max-width: 100%; max-height: 92vh; border-radius: 8px; object-fit: contain; box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
     #lb-close {
       position: absolute;
-      top: 16px; right: 20px;
+      top: 20px; right: 24px;
       color: #fff;
-      font-size: 28px;
+      font-size: 32px;
       background: none;
       border: none;
       cursor: pointer;
-      opacity: 0.7;
+      opacity: 0.75;
       line-height: 1;
     }
     #lb-close:hover { opacity: 1; }
-
-    @media (max-width: 480px) {
+    @media (max-width: 640px) {
       .skills-grid { grid-template-columns: 1fr; }
       .photo-gallery.cols-3 { grid-template-columns: repeat(2, 1fr); }
       .photo-gallery.cols-4,
       .photo-gallery.cols-5 { grid-template-columns: repeat(3, 1fr); }
+      .hero { padding: 48px 20px 40px; }
     }
   </style>
 </head>
 <body>
-
 <!-- Language Toggle -->
 <div id="lang-bar">
   <button class="lang-btn active" onclick="setLang('en')">🇬🇧 English</button>
-  <button class="lang-btn"        onclick="setLang('fr')">🇫🇷 Français</button>
+  <button class="lang-btn" onclick="setLang('fr')">🇫🇷 Français</button>
 </div>
 
 <!-- Hero -->
@@ -445,7 +421,6 @@
 
 <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
 <div class="container">
-
   <div class="section-head">
     <h2 class="en">Professional Experience</h2>
     <h2 class="fr">Expérience Professionnelle</h2>
@@ -464,7 +439,7 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/terrabeka-logo.jpg" alt="Terra Beka Lodge logo">
+        <img class="job-logo" src="Img/terrabeka-logo.jpg" alt="Terra Beka Lodge logo">
         <div class="job-title-block">
           <div class="job-title">Terra-Beka Lodge ★★★★</div>
           <div class="job-meta">
@@ -483,11 +458,11 @@
       </div>
     </div>
     <div class="photo-gallery cols-5">
-      <img src="img/terrabeka1.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
-      <img src="img/terrabeka2.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
-      <img src="img/terrabeka3.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
-      <img src="img/terrabeka4.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
-      <img src="img/terrabeka5.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
+      <img src="Img/terrabeka1.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
+      <img src="Img/terrabeka2.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
+      <img src="Img/terrabeka3.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
+      <img src="Img/terrabeka4.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
+      <img src="Img/terrabeka5.jpg" alt="Terra-Beka Lodge" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -503,12 +478,12 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/coral-logo.jpg" alt="Coral B&B logo">
+        <img class="job-logo" src="Img/coral-logo.jpg" alt="Coral B&amp;B logo">
         <div class="job-title-block">
           <div class="job-title">Coral B&amp;B</div>
           <div class="job-meta">
             <span class="job-location">📍 Liuqiu Island</span>
-            <a class="job-link" href="https://www.agoda.com/coral-b-b/hotel/liuqiu-tw.html?cid=1720055&ds=lzxs%2FgBOR6M35B4G" target="_blank" rel="noopener">
+            <a class="job-link" href="https://www.agoda.com/coral-b-b/hotel/liuqiu-tw.html?cid=1720055&amp;ds=lzxs%2FgBOR6M35B4G" target="_blank" rel="noopener">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
               <span class="en-i">Visit website</span>
               <span class="fr-i">Site web</span>
@@ -522,8 +497,8 @@
       </div>
     </div>
     <div class="photo-gallery cols-2">
-      <img src="img/coral1.jpg" alt="Coral B&B" loading="lazy" onclick="openLb(this)">
-      <img src="img/coral2.jpg" alt="Coral B&B" loading="lazy" onclick="openLb(this)">
+      <img src="Img/coral1.jpg" alt="Coral B&amp;B" loading="lazy" onclick="openLb(this)">
+      <img src="Img/coral2.jpg" alt="Coral B&amp;B" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -531,12 +506,12 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/meetingmate-logo.jpg" alt="Meeting Mate Hostel logo">
+        <img class="job-logo" src="Img/meetingmate-logo.jpg" alt="Meeting Mate Hostel logo">
         <div class="job-title-block">
           <div class="job-title">The Meeting Mate Hostel</div>
           <div class="job-meta">
             <span class="job-location">📍 Taipei</span>
-            <a class="job-link" href="https://www.agoda.com/h32608691/hotel/taipei-tw.html?cid=1720055&ds=MwfLMiBgSk8hnM1C" target="_blank" rel="noopener">
+            <a class="job-link" href="https://www.agoda.com/h32608691/hotel/taipei-tw.html?cid=1720055&amp;ds=MwfLMiBgSk8hnM1C" target="_blank" rel="noopener">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
               <span class="en-i">Visit website</span>
               <span class="fr-i">Site web</span>
@@ -550,8 +525,8 @@
       </div>
     </div>
     <div class="photo-gallery cols-2">
-      <img src="img/meetingmate1.jpg" alt="Meeting Mate Hostel" loading="lazy" onclick="openLb(this)">
-      <img src="img/meetingmate2.jpg" alt="Meeting Mate Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/meetingmate1.jpg" alt="Meeting Mate Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/meetingmate2.jpg" alt="Meeting Mate Hostel" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -559,12 +534,12 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/cotemer-logo.jpg" alt="Résidence Côté Mer logo">
+        <img class="job-logo" src="Img/cotemer-logo.jpg" alt="Résidence Côté Mer logo">
         <div class="job-title-block">
           <div class="job-title">Résidence Côté Mer</div>
           <div class="job-meta">
             <span class="job-location">📍 La Grande Motte</span>
-            <a class="job-link" href="https://www.agoda.com/residence-cote-mer/hotel/la-grande-motte-fr.html?cid=1720055&ds=ou0yLnuHbVqoUxm6" target="_blank" rel="noopener">
+            <a class="job-link" href="https://www.agoda.com/residence-cote-mer/hotel/la-grande-motte-fr.html?cid=1720055&amp;ds=ou0yLnuHbVqoUxm6" target="_blank" rel="noopener">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
               <span class="en-i">Visit website</span>
               <span class="fr-i">Site web</span>
@@ -578,8 +553,8 @@
       </div>
     </div>
     <div class="photo-gallery cols-2">
-      <img src="img/cotemer1.jpg" alt="Résidence Côté Mer" loading="lazy" onclick="openLb(this)">
-      <img src="img/cotemer2.jpg" alt="Résidence Côté Mer" loading="lazy" onclick="openLb(this)">
+      <img src="Img/cotemer1.jpg" alt="Résidence Côté Mer" loading="lazy" onclick="openLb(this)">
+      <img src="Img/cotemer2.jpg" alt="Résidence Côté Mer" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -587,7 +562,7 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/myway-logo.png" alt="On My Way Hostel logo">
+        <img class="job-logo" src="Img/myway-logo.png" alt="On My Way Hostel logo">
         <div class="job-title-block">
           <div class="job-title">On My Way Hostel</div>
           <div class="job-meta">
@@ -606,9 +581,9 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
-      <img src="img/myway1.png" alt="On My Way Hostel" loading="lazy" onclick="openLb(this)">
-      <img src="img/myway2.png" alt="On My Way Hostel" loading="lazy" onclick="openLb(this)">
-      <img src="img/myway3.png" alt="On My Way Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/myway1.png" alt="On My Way Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/myway2.png" alt="On My Way Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/myway3.png" alt="On My Way Hostel" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -624,7 +599,7 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/ramada-logo.png" alt="Ramada logo">
+        <img class="job-logo" src="Img/ramada-logo.png" alt="Ramada logo">
         <div class="job-title-block">
           <div class="job-title">Ramada &amp; Wyndham Garden Hotels</div>
           <div class="job-meta">
@@ -643,10 +618,10 @@
       </div>
     </div>
     <div class="photo-gallery cols-4">
-      <img src="img/ramada1.png"  alt="Ramada Queenstown"  loading="lazy" onclick="openLb(this)">
-      <img src="img/ramada2.png"  alt="Ramada Queenstown"  loading="lazy" onclick="openLb(this)">
-      <img src="img/wyndham1.png" alt="Wyndham Garden"     loading="lazy" onclick="openLb(this)">
-      <img src="img/wyndham2.png" alt="Wyndham Garden"     loading="lazy" onclick="openLb(this)">
+      <img src="Img/ramada1.png" alt="Ramada Queenstown" loading="lazy" onclick="openLb(this)">
+      <img src="Img/ramada2.png" alt="Ramada Queenstown" loading="lazy" onclick="openLb(this)">
+      <img src="Img/wyndham1.png" alt="Wyndham Garden" loading="lazy" onclick="openLb(this)">
+      <img src="Img/wyndham2.png" alt="Wyndham Garden" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -654,7 +629,7 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/kingsgate-logo.png" alt="Kingsgate Hotel logo">
+        <img class="job-logo" src="Img/kingsgate-logo.png" alt="Kingsgate Hotel logo">
         <div class="job-title-block">
           <div class="job-title">Kingsgate Hotel</div>
           <div class="job-meta">
@@ -673,9 +648,9 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
-      <img src="img/kingsgate1.png" alt="Kingsgate Hotel" loading="lazy" onclick="openLb(this)">
-      <img src="img/kingsgate2.png" alt="Kingsgate Hotel" loading="lazy" onclick="openLb(this)">
-      <img src="img/kingsgate3.png" alt="Kingsgate Hotel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/kingsgate1.png" alt="Kingsgate Hotel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/kingsgate2.png" alt="Kingsgate Hotel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/kingsgate3.png" alt="Kingsgate Hotel" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -683,7 +658,7 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/lylo-logo.png" alt="Lylo logo">
+        <img class="job-logo" src="Img/lylo-logo.png" alt="Lylo logo">
         <div class="job-title-block">
           <div class="job-title">Lylo Capsule Hostel</div>
           <div class="job-meta">
@@ -702,8 +677,8 @@
       </div>
     </div>
     <div class="photo-gallery cols-2">
-      <img src="img/lylo1.png" alt="Lylo Capsule Hostel" loading="lazy" onclick="openLb(this)">
-      <img src="img/lylo2.png" alt="Lylo Capsule Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/lylo1.png" alt="Lylo Capsule Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/lylo2.png" alt="Lylo Capsule Hostel" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -711,7 +686,7 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/tasman-logo.png" alt="Tasman Holiday Park logo">
+        <img class="job-logo" src="Img/tasman-logo.png" alt="Tasman Holiday Park logo">
         <div class="job-title-block">
           <div class="job-title">Tasman Holiday Park</div>
           <div class="job-meta">
@@ -730,9 +705,9 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
-      <img src="img/tasman1.png" alt="Tasman Holiday Park" loading="lazy" onclick="openLb(this)">
-      <img src="img/tasman2.png" alt="Tasman Holiday Park" loading="lazy" onclick="openLb(this)">
-      <img src="img/tasman3.png" alt="Tasman Holiday Park" loading="lazy" onclick="openLb(this)">
+      <img src="Img/tasman1.png" alt="Tasman Holiday Park" loading="lazy" onclick="openLb(this)">
+      <img src="Img/tasman2.png" alt="Tasman Holiday Park" loading="lazy" onclick="openLb(this)">
+      <img src="Img/tasman3.png" alt="Tasman Holiday Park" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -740,7 +715,7 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/creeksyde-logo.png" alt="Creeksyde Holiday Park logo">
+        <img class="job-logo" src="Img/creeksyde-logo.png" alt="Creeksyde Holiday Park logo">
         <div class="job-title-block">
           <div class="job-title">Creeksyde Holiday Park</div>
           <div class="job-meta">
@@ -759,9 +734,9 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
-      <img src="img/creeksyde1.png" alt="Creeksyde Holiday Park" loading="lazy" onclick="openLb(this)">
-      <img src="img/creeksyde2.png" alt="Creeksyde Holiday Park" loading="lazy" onclick="openLb(this)">
-      <img src="img/creeksyde3.png" alt="Creeksyde Holiday Park" loading="lazy" onclick="openLb(this)">
+      <img src="Img/creeksyde1.png" alt="Creeksyde Holiday Park" loading="lazy" onclick="openLb(this)">
+      <img src="Img/creeksyde2.png" alt="Creeksyde Holiday Park" loading="lazy" onclick="openLb(this)">
+      <img src="Img/creeksyde3.png" alt="Creeksyde Holiday Park" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -777,7 +752,7 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/rivesbleues-logo.png" alt="Les Rives Bleues logo">
+        <img class="job-logo" src="Img/rivesbleues-logo.png" alt="Les Rives Bleues logo">
         <div class="job-title-block">
           <div class="job-title">Hôtel Les Rives Bleues</div>
           <div class="job-meta">
@@ -796,8 +771,8 @@
       </div>
     </div>
     <div class="photo-gallery cols-2">
-      <img src="img/rivesbleues1.png" alt="Les Rives Bleues" loading="lazy" onclick="openLb(this)">
-      <img src="img/rivesbleues2.png" alt="Les Rives Bleues" loading="lazy" onclick="openLb(this)">
+      <img src="Img/rivesbleues1.png" alt="Les Rives Bleues" loading="lazy" onclick="openLb(this)">
+      <img src="Img/rivesbleues2.png" alt="Les Rives Bleues" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -813,7 +788,7 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/waga-logo.png" alt="Wagaligong Surf Hostel logo">
+        <img class="job-logo" src="Img/waga-logo.png" alt="Wagaligong Surf Hostel logo">
         <div class="job-title-block">
           <div class="job-title">Wagaligong Surf Hostel</div>
           <div class="job-meta">
@@ -832,9 +807,9 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
-      <img src="img/waga1.png" alt="Wagaligong Surf Hostel" loading="lazy" onclick="openLb(this)">
-      <img src="img/waga2.png" alt="Wagaligong Surf Hostel" loading="lazy" onclick="openLb(this)">
-      <img src="img/waga3.png" alt="Wagaligong Surf Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/waga1.png" alt="Wagaligong Surf Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/waga2.png" alt="Wagaligong Surf Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/waga3.png" alt="Wagaligong Surf Hostel" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
 
@@ -842,12 +817,12 @@
   <div class="job-card">
     <div class="job-card-header">
       <div class="job-top">
-        <img class="job-logo" src="img/rainbow-logo.png" alt="Rainbow Wave Surf Hostel logo">
+        <img class="job-logo" src="Img/rainbow-logo.png" alt="Rainbow Wave Surf Hostel logo">
         <div class="job-title-block">
           <div class="job-title">Rainbow Wave Surf Hostel</div>
           <div class="job-meta">
             <span class="job-location">📍 Hengchun, Kenting</span>
-            <a class="job-link" href="https://www.agoda.com/rainbow-wave-surfing-hostel/hotel/kenting-tw.html?cid=1720055&ds=v%2F%2FNco6DVQ4%2BbwRn" target="_blank" rel="noopener">
+            <a class="job-link" href="https://www.agoda.com/rainbow-wave-surfing-hostel/hotel/kenting-tw.html?cid=1720055&amp;ds=v%2F%2FNco6DVQ4%2BbwRn" target="_blank" rel="noopener">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
               <span class="en-i">Visit website</span>
               <span class="fr-i">Site web</span>
@@ -861,13 +836,12 @@
       </div>
     </div>
     <div class="photo-gallery cols-3">
-      <img src="img/rainbow1.png" alt="Rainbow Wave Surf Hostel" loading="lazy" onclick="openLb(this)">
-      <img src="img/rainbow2.png" alt="Rainbow Wave Surf Hostel" loading="lazy" onclick="openLb(this)">
-      <img src="img/rainbow3.png" alt="Rainbow Wave Surf Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/rainbow1.png" alt="Rainbow Wave Surf Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/rainbow2.png" alt="Rainbow Wave Surf Hostel" loading="lazy" onclick="openLb(this)">
+      <img src="Img/rainbow3.png" alt="Rainbow Wave Surf Hostel" loading="lazy" onclick="openLb(this)">
     </div>
   </div>
-
-</div><!-- /container -->
+</div>
 
 <!-- ── Skills & Profile ── -->
 <div class="skills-section">
@@ -875,22 +849,22 @@
     <h2 class="skills-head en">Skills &amp; Profile</h2>
     <h2 class="skills-head fr">Compétences &amp; Profil</h2>
     <div class="skills-rule"></div>
-
     <div class="skills-grid">
+      <!-- Housekeeping block – simplified & accurate terms -->
       <div class="skill-block">
         <h4 class="en">Housekeeping</h4>
-        <h4 class="fr">Ménage &amp; Hôtellerie</h4>
-        <span class="pill pill-teal en">Full turnover (à blanc)</span>
+        <h4 class="fr">Ménage hôtelier</h4>
+        <span class="pill pill-teal en">Full room turnover</span>
         <span class="pill pill-teal fr">Chambres à blanc</span>
         <span class="pill pill-teal en">Daily servicing</span>
-        <span class="pill pill-teal fr">Recouche</span>
-        <span class="pill pill-teal en">Room inspection</span>
+        <span class="pill pill-teal fr">Recouches</span>
+        <span class="pill pill-teal en">Room inspections</span>
         <span class="pill pill-teal fr">Vérification chambres</span>
         <span class="pill pill-teal en">Linen &amp; laundry</span>
         <span class="pill pill-teal fr">Lingerie</span>
-        <span class="pill pill-teal en">Common areas</span>
-        <span class="pill pill-teal fr">Espaces communs</span>
       </div>
+
+      <!-- Languages -->
       <div class="skill-block">
         <h4 class="en">Languages</h4>
         <h4 class="fr">Langues</h4>
@@ -899,6 +873,8 @@
         <span class="pill pill-lang en">🇬🇧 English — Fluent</span>
         <span class="pill pill-lang fr">🇬🇧 Anglais — Courant</span>
       </div>
+
+      <!-- Hospitality & Reception – simplified -->
       <div class="skill-block">
         <h4 class="en">Hospitality &amp; Reception</h4>
         <h4 class="fr">Accueil &amp; Réception</h4>
@@ -908,21 +884,21 @@
         <span class="pill pill-purple fr">Arrivées / Départs</span>
         <span class="pill pill-purple en">Reservations</span>
         <span class="pill pill-purple fr">Réservations</span>
-        <span class="pill pill-purple en">Pool maintenance</span>
-        <span class="pill pill-purple fr">Entretien piscine</span>
-        <span class="pill pill-purple en">Minor renovation</span>
-        <span class="pill pill-purple fr">Petite rénovation</span>
+        <span class="pill pill-purple en">Pool &amp; facility maintenance</span>
+        <span class="pill pill-purple fr">Entretien piscine &amp; installations</span>
       </div>
+
+      <!-- Outdoor & Sports – simplified -->
       <div class="skill-block">
         <h4 class="en">Outdoor &amp; Sports</h4>
-        <h4 class="fr">Outdoor &amp; Sport</h4>
+        <h4 class="fr">Activités outdoor &amp; sport</h4>
         <span class="pill pill-green">🏄 <span class="en-i">Surf coaching</span><span class="fr-i">Coaching surf</span></span>
-        <span class="pill pill-green en">Equipment rental mgmt</span>
-        <span class="pill pill-green fr">Gestion loc. matériel</span>
+        <span class="pill pill-green en">Equipment rental management</span>
+        <span class="pill pill-green fr">Gestion matériel location</span>
         <span class="pill pill-green en">Groundskeeping</span>
-        <span class="pill pill-green fr">Espaces verts</span>
-        <span class="pill pill-green en">🚗 Category B Licence</span>
-        <span class="pill pill-green fr">🚗 Permis B</span>
+        <span class="pill pill-green fr">Entretien espaces verts</span>
+        <span class="pill pill-green en">Category B Licence</span>
+        <span class="pill pill-green fr">Permis B</span>
       </div>
     </div>
   </div>
@@ -934,14 +910,14 @@
     <span class="en-i">Steven Loic Golay · French-Swiss · Hospitality Specialist</span>
     <span class="fr-i">Steven Loic Golay · Franco-Suisse · Professionnel de l'Hôtellerie</span>
   </p>
-  <p style="margin-top:6px;">
+  <p style="margin-top:8px;">
     <a href="https://sites.google.com/view/loic-cv/about" class="en-i">View original Google Site ↗</a>
     <a href="https://sites.google.com/view/loic-cv/about" class="fr-i">Site Google original ↗</a>
   </p>
 </footer>
 
 <!-- Lightbox -->
-<div id="lightbox" onclick="closeLb()">
+<div id="lightbox" onclick="if(event.target.id==='lightbox')closeLb()">
   <button id="lb-close" onclick="closeLb()">✕</button>
   <img id="lb-img" src="" alt="Photo">
 </div>
@@ -972,4 +948,3 @@
 </script>
 </body>
 </html>
-
